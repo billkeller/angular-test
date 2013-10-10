@@ -9,4 +9,4 @@ Requirements:
 
 2) from angular-test root run 'bower install'
 
-3) from angular-test run 'compass watch css/scss/style.css'
+3) from angular-test root run 'compass watch css/scss/style.css'
