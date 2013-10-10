@@ -17,8 +17,8 @@
           <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
     <div class="container">
-      <header>header</header>
-
+      <h2>Accordians</h2>
+      <hr>
       <div ng-controller="AccordionDemoCtrl" class="accordian">
         <label class="checkbox">
           <input type="checkbox" ng-model="oneAtATime">
@@ -45,21 +45,23 @@
           </accordion-group>
         </accordion>
       </div>
-    
+      <hr>
+      <h2>Alerts</h2>
+      <hr>
       <div ng-controller="AlertDemoCtrl" class="alert">
         <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
         <button class='btn' ng-click="addAlert()">Add Alert</button>
       </div>
-    </div>
-    <!--/.container-->
-    
-    <footer>
-      <input type="text" ng-model="name" placeholder="Your Name">
+      <hr>
+      <h2>Independent of UI-Bootstrap</h2>  
+      <hr>
+      <input type="text" ng-model="name" placeholder="Type Your Name Here">
       <p>Hello {{name}}</p>
-      <script src="/bower_components/angular/angular.js"></script>
-      <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-      <script src="js/app.js"></script>
-    </footer>
+  </div>
+  <!--/.container-->
 
+  <script src="/bower_components/angular/angular.js"></script>
+      <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+      <script src="js/app.js"></script>    
   </body>
 </html>
