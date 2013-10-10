@@ -1,0 +1,16 @@
+{
+  "name": "angular-test",
+  "version": "0.0.1",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.6.0",
+    "angular": "git://github.com/angular/bower-angular.git#~1.0.8"
+  }
+}
