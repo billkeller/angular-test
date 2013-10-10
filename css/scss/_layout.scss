@@ -1,2 +1,33 @@
 // Grids
+$border-box-sizing: true;
+$total-columns: 12;
+$column-width: 60px;
+$gutter-width: 20px;
+$grid-padding: 10px;
+$container-style: fluid;
 
+// Breakpoints // Small, Medium, Wide are intended mainly for .global-header, but may be incorporated as needed
+// By default all CSS defaults to our 'SMALL' layout
+/*$small: 1080px 16;
+$medium: 1550px 16;
+$wide: 1640px 16;
+$extraWide: 2180px 18;
+$smallest: 320px 1080px 12;*/
+
+.grid {
+  @include container;
+  > * {outline: 1px dotted red;}
+  @include susy-grid-background;
+  @include container;
+}
+
+.one {
+  @include span-columns(1, $total-columns);
+}
+.two {
+  @include span-columns(2, $total-columns);
+}
+
+.three {
+  @include span-columns(3, $total-columns);
+}

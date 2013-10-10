@@ -13,6 +13,12 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     </head>
     <body>
+
+      <div class="grid">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+      </div>
       <!--[if lt IE 7]>
           <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
@@ -45,6 +51,39 @@
           </accordion-group>
         </accordion>
       </div>
+      
+      <hr>
+      <h2>Tabs</h2>
+      <hr>
+      <div ng-controller="TabsDemoCtrl">
+        Select a tab by setting active binding to true:
+        <br />
+        <button class="btn btn-small" ng-click="tabs[0].active = true">Select second tab</button>
+        <button class="btn btn-small" ng-click="tabs[1].active = true">Select third tab</button>
+        <button class="btn btn-small" ng-click="tabs[1].disabled = ! tabs[1].disabled">Enable / Disable third tab</button>
+        <hr />
+
+        <tabset>
+          <tab heading="Static title">Static content</tab>
+          <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+            {{tab.content}}
+          </tab>
+          <tab select="alertMe()">
+            <tab-heading>
+              <i class="icon-bell"></i> Select me for alert!
+            </tab-heading>
+            I've got an HTML heading, and a select callback. Pretty cool!
+          </tab>
+        </tabset>
+
+        <hr />
+
+        <tabset vertical="true" type="navType">
+          <tab heading="Vertical 1">Vertical content 1</tab>
+          <tab heading="Vertical 2">Vertical content 2</tab>
+        </tabset>
+      </div>
+
       <hr>
       <h2>Alerts</h2>
       <hr>
