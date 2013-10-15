@@ -17,7 +17,9 @@ $legacy-support-for-ie6: false;
 @import "susy";
 
 // Import our partials
+@import "variables";
 @import "layout";
+@import "tabs";
 
 // Include responsive Bootstrap styles
 // @import "bootstrap-responsive";
